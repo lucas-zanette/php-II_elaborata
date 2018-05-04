@@ -7,7 +7,7 @@ use veiculos\Veiculo;
 use veiculos\Moto;
 use veiculos\Carro;
 
-$moto = new Moto();
+$moto = new Moto("Kawasaki");
 $carro = new Carro("VW");
 
 echo "<pre>";
