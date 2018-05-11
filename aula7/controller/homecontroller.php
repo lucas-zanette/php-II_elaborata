@@ -1,10 +1,18 @@
 <?php
+
 namespace controller;
 
+use model\Produto;
+
 class HomeController {
+
+    public function cadastrarProduto(Produto $produto) {
     
-    public function listarProdutos() {
+        $produtoDB = new \model\ProdutoDB();
+        $produtoDB->gravarProduto($produto);
         
+        
+      
     }
-    
+
 }

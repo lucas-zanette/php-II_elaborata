@@ -9,15 +9,7 @@ class Produto {
     private $quantidade;
     private $cor;
     private $peso;
-
-    function __construct($nome, $preco, $quantidade, $cor, $peso) {
-        $this->nome = $nome;
-        $this->preco = $preco;
-        $this->quantidade = $quantidade;
-        $this->cor = $cor;
-        $this->peso = $peso;
-    }
-
+  
     function getNome() {
         return $this->nome;
     }
