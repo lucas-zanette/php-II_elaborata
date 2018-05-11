@@ -11,11 +11,11 @@ class ProdutoDB {
         $db = \model\Conexao::getConexao();
         $stm = $db->prepare($sql);
         
-        @$stm->bindParam(":nome", $produto->getNome());
-        @$stm->bindParam(":preco", $produto->getPreco());
-        @$stm->bindParam(":quantidade", $produto->getQuantidade());
-        @$stm->bindParam(":cor", $produto->getCor());
-        @$stm->bindParam(":peso", $produto->getPeso());
+        $stm->bindValue(":nome", $produto->getNome());
+        $stm->bindValue(":preco", $produto->getPreco());
+        $stm->bindValue(":quantidade", $produto->getQuantidade());
+        $stm->bindValue(":cor", $produto->getCor());
+        $stm->bindValue(":peso", $produto->getPeso());
         
         $stm->execute();
                 
